@@ -1,0 +1,19 @@
+.hover-preview {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.hover-preview img {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+}
+
+.w-full:hover .hover-preview {
+    display: flex;
+    flex-wrap: wrap;
+}
