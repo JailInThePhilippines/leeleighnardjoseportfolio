@@ -15,18 +15,16 @@ export class ProjectsComponent implements AfterViewInit {
   }
   onHoverStart(index: number) {
     const video = this.videos.toArray()[index]?.nativeElement;
-    if (video) {
-      video.play();
-    } else {
-      console.error(`Video element at index ${index} not found.`);
+    if (video && video.paused) {
+      video.play().catch(error => console.error('Video playback failed:', error));
     }
   }
+  
   onHoverEnd(index: number) {
     const video = this.videos.toArray()[index]?.nativeElement;
-    if (video) {
+    if (video && !video.paused) {
       video.pause();
-    } else {
-      console.error(`Video element at index ${index} not found.`);
     }
   }
+  
 }
