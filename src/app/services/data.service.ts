@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = 'https://portfolio-inquiries.onrender.com/api';
 
   constructor(private http: HttpClient) { }
 
